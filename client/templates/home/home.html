@@ -1,0 +1,54 @@
+<template name="home">
+  <div class="home">
+      <div class="container">
+          <div class="jumbotron">
+              <h1>{{ siteTitle }}</h1>
+              <h1>KPOINT</h1>
+              <p class="lead">Online Project Collaboration</p>
+              <a href="{{pathFor 'dashboard'}}" class="btn btn-lg btn-danger">My Project</a>
+          </div>
+          <div class="row">
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-users "></i>Project Team</h2>
+                  <p>
+                      Invite your project team to collaborate on your project. They will automactically see your project once they've been invited.
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-twitch "></i> Conversation</h2>
+                  <p>
+                      Any comments or remarks made on a specific project will be stored with the project
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-check-circle "></i>To do Lists</h2>
+                  <p>
+                      Each project can maintain it's own to do list, so everyone knows what has already been done.
+                  </p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-cloud-upload"></i>Upload Files</h2>
+                  <p>
+                      Upload project documents.
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-weixin"></i>Live Chat</h2>
+                  <p>
+                      You can chat with your project team anywhere and anytime.
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                  <h2><i class="fa fa-cloud-download"></i>Download Files</h2>
+                  <p>
+                      Download project documents.
+                  </p>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</template>
+
