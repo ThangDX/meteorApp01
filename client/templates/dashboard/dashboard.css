@@ -1,0 +1,12 @@
+@import '../../stylesheets/base/mixins.import.less';
+@import "../../stylesheets/base/variables.import.less";
+
+.dashboard {
+    text-transform: capitalize;
+}
+
+input.biginput{
+    border: none;
+    font-size: 19px;
+    height: 45px;
+}
