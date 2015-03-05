@@ -2,7 +2,7 @@
 @import "../../stylesheets/base/variables.import.less";
 
 .dashboard {
-    text-transform: capitalize;
+
 }
 
 input.biginput{
@@ -10,3 +10,4 @@ input.biginput{
     font-size: 19px;
     height: 45px;
 }
+

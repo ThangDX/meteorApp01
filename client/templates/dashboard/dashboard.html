@@ -14,7 +14,7 @@
             {{#each projects}}
                 {{> project}}
             {{else}}
-                <h4>No Project Found.</h4>
+                <h4>No Project Found!</h4>
             {{/each}}
       </div>
   </div>
@@ -30,8 +30,8 @@
                     </p>
                     <p>
                         <h5>
-                            <a href="/projects/{{_id}}">Project Name</a>
-                            <br/>Entered on 12/28/2014
+                            <a href="/projects/{{_id}}">{{name}}</a>
+                            <br/>Entered on {{dateentered}}
                         </h5>
                     </p>
                 </h3>
@@ -42,7 +42,7 @@
                 </small>
                 <br/>
                 <small>
-                    <span>on 01/01/2015</span>
+                    <span>on {{datedue}}</span>
                 </small>
             </div>
         </div>
