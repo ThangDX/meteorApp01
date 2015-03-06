@@ -9,15 +9,13 @@ Router.route('/', {
 
 Router.route('/dashboard', function () {
     this.render('dashboard', {
-        waitOn: function () {
+        waitOn: function() {
             return Meteor.subscribe('projects');
         },
-        data: {
-            'projects': function() {
-                return Projects.find();
-            }
+        data: function() {
+            return Projects.find();
         }
-    });
+    })
 });
 
 Router.route('/customers');

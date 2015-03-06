@@ -6,7 +6,7 @@
     </ol>
       <div class="page-header">
           <p>
-            <input class="biginput" type="text" name="projectNameEnter" id="projectNameEnter" placeholder="Add A Project" value=""/>
+              <input class="biginput" type="text" name="projectNameEnter" id="projectNameEnter" placeholder="Add A Project" value="">
           </p>
       </div>
       <h5>Projects listed by <a class="sortToggle" href="#">name</a></h5>
@@ -38,7 +38,7 @@
             </div>
             <div class="panel-body">
                 <small>
-                    <span>Due for <a href="/customers/{{custname}}">Customer Name</a></span>
+                    <span>Due for <a href="/customers/{{custname}}">{{customer.name}}</a></span>
                 </small>
                 <br/>
                 <small>
@@ -46,6 +46,5 @@
                 </small>
             </div>
         </div>
-
     </div>
 </template>

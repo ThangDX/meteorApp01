@@ -4,7 +4,9 @@ Meteor.startup(function() {
     username: 'postmaster@domain.com',
     password: 'password-goes-here'
   });
-
+    if(Customers.find().count() < 1) {
+        return Customers.insert({name: 'House Account'});
+    }
   Meteor.methods({
     'sendContactEmail': function(name, email, message) {
       this.unblock();
@@ -17,7 +19,7 @@ Meteor.startup(function() {
         html: Handlebars.templates['contactEmail']({siteURL: Meteor.absoluteUrl(), fromName: name, fromEmail: email, message: message})
       });
     },
-      'saveProject': function (project) {
+      'saveProject': function(project) {
           check(project.name, String);
           project.userId = Meteor.userId();
           project.dateentered = new Date();
