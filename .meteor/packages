@@ -20,3 +20,6 @@ anti:fake
 cunneen:mailgun
 iron:router@1.0.0
 yasinuslu:blaze-meta
+rzymek:fullcalendar
+cfs:standard-packages
+cfs:filesystem
