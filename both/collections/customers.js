@@ -1,7 +1,7 @@
 /**
  * Created by thangdx on 05/03/2015.
  */
-Customers = new Meteor.Collection('customers');
+Customers = new Mongo.Collection('customers');
 
 Customers.allow({
     insert: function () {

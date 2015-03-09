@@ -11,7 +11,7 @@ Template.calendar.rendered = function() {
             ce.className = 'todo';
             ce.project = Session.get('active_project');
             ce.title = 'New Milestone';
-            ce.owner = Meteor.userId();
+            ce.owner = Meteor.userId;
             Meteor.call('addCalEvent',ce);
         },
         eventClick: function (calEvent, jsEvent,view) {
@@ -20,7 +20,7 @@ Template.calendar.rendered = function() {
         eventDrop: function (reqEvent) {
             Meteor.call('updateEventTimes', reqEvent);
         },
-        events: function (start, end, callback) {
+        events: function (start, end, timezone,callback) {
             var calEvents = Calevents.find({project: Session.get('active_project')}, {reactive: false}).fetch();
             callback(calEvents);
         },
@@ -39,7 +39,8 @@ Template.calendar.rendered = function() {
         editable: true,
         weekMode: 'liquid'
     }).data().fullCalendar;
-    Deps.autorun(function () {
+
+    Tracker.autorun(function () {
         Calevents.find({project: Session.get('active_project')}).fetch();
         if(calendar) {
             calendar.refetchEvents();

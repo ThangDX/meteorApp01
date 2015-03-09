@@ -22,15 +22,15 @@ Meteor.publish('customers', function () {
     return Customers.find();
 });
 
-Meteor.publish('calevents', function (projct) {
-    return Calevents.find({project:project});
+Meteor.publish('calevents', function () {
+    return Calevents.find();
 });
-Meteor.publish('conversations', function (projct) {
-    return Conversations.find({project:project});
+Meteor.publish('conversations', function () {
+    return Conversations.find();
 });
-Meteor.publish('todos', function (projct) {
-    return Todos.find({project:project});
+Meteor.publish('todos', function () {
+    return Todos.find();
 });
-Meteor.publish('uploads', function (projct) {
-    return Uploads.find({project:project});
+Meteor.publish('uploads', function () {
+    return Uploads.find();
 });

@@ -1,7 +1,7 @@
 /**
  * Created by thangdx on 05/03/2015.
  */
-Chats = new Meteor.Collection('chats');
+Chats = new Mongo.Collection('chats');
 
 Chats.allow({
     insert: function () {

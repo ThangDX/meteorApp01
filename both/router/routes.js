@@ -59,11 +59,11 @@ Router.map(function() {
         data: function() {
             return Projects.findOne({_id:this.params.id});
         },
-        onAfterAction: function() {
+        /*onAfterAction: function() {
             SEO.set({
                 title: 'Project View |' + SEO.settings.title
             })
-        }
+        }*/
     });
 
     this.route('/customers');

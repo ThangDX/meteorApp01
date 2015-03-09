@@ -1,7 +1,7 @@
 /**
  * Created by thangdx on 05/03/2015.
  */
-Conversations = new Meteor.Collection('conversations');
+Conversations = new Mongo.Collection('conversations');
 
 Conversations.allow({
     insert: function () {

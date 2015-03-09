@@ -1,7 +1,7 @@
 /**
  * Created by thangdx on 05/03/2015.
  */
-Projects = new Meteor.Collection('projects');
+Projects = new Mongo.Collection('projects');
 
 Projects.allow({
     insert: function () {

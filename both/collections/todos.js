@@ -1,9 +1,9 @@
 /**
- * Created by thangdx on 05/03/2015.
+ * Created by KPMS on 09/03/15.
  */
-Calevents = new Mongo.Collection('calevents');
+Todos = new Mongo.Collection('todos');
 
-Calevents.allow({
+Todos.allow({
     insert: function () {
         return true;
     },
