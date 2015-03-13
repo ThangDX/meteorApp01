@@ -5,6 +5,9 @@
             <li><a href="/dashboard"><i class="fa fa-cubes"></i>Projects</a></li>
             <li class="active">{{name}}</li>
         </ol>
+       {{#if editing_calevent}}
+            {{> caltask}}
+        {{/if}}
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Project Detail</h3>

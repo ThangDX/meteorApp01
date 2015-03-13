@@ -34,23 +34,33 @@ Meteor.startup(function() {
           project.invited = [];
           return Projects.insert(project);
       },
-      'removeProject': function (id) {
-          return Projects.remove({_id:id});
-      },
-      'addCalEvent': function (calevent) {
-          if(!calevent.type) {
+
+      "addCalEvent": function (calevent) {
+          if (!calevent.type) {
               calevent.type = 'milestone';
           }
           return Calevents.insert(calevent);
       },
-      'updateEventTimes': function (calEvent) {
-          return Calevents.update({_id: calEvent._id}, {
-              $set: {
-                  title: calEvent.title,
-                  start:calEvent.start,
-                  end: calEvent.end
+      'updateCalEvent':function(calevent){
+          return Calevents.update({_id:calevent._id},{
+              $set:{
+                  title:calevent.title,
+                  start: calevent.start,
+                  end: calevent.end
               }
           })
+      },
+      'updateEventTimes':function(calEvent){
+          return Calevents.update({_id:calEvent._id},{
+              $set:{
+                  title:calEvent.title,
+                  start:calEvent.start,
+                  end:calEvent.end
+              }
+          })
+      },
+      'removeCalEvent':function(id){
+          return Calevents.remove({_id:id});
       }
   });
 });

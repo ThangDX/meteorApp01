@@ -1,0 +1,40 @@
+<template name="caltask">
+    <div class="modal fade in show" id="editCalTask" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="model-dialog">
+            <div class="model-content">
+                <div class="model-header">
+                    <button class="close closeTask" type="button" data-dismiss = "modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="">Edit Cal Task</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Task Type</label>
+                        <select name="taskTitle" id="taskTitle" class="form-control input-md-4 taskTitle">
+                            <option value="">Select</option>
+                            <option value="milestone">Add Milestone</option>
+                            <option value="hoursworked">Log Time Worked</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Milestone Description</label>
+                        <input type="text" class="form-control name" id="" placeholder="Enter Milestone Description"/>
+                        <p class="help-block">Help text here.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Number of Hours</label>
+                        <input type="number" class="form-control name focus input-md-2" id="" placeholder="Hours Worked"/>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger deleteCalTask" data-dismiss="modal">Remove</button>
+                        <button type="button" class="btn btn-default closeTask" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary saveCalTask">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
