@@ -50,6 +50,7 @@ Meteor.startup(function() {
               }
           })
       },
+
       'updateEventTimes':function(calEvent){
           return Calevents.update({_id:calEvent._id},{
               $set:{
@@ -61,6 +62,9 @@ Meteor.startup(function() {
       },
       'removeCalEvent':function(id){
           return Calevents.remove({_id:id});
+      },
+      'removeProject': function (id) {
+          return Projects.remove({_id:id});
       }
   });
 });

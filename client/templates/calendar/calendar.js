@@ -59,14 +59,27 @@ Template.calendar.rendered = function() {
 }
 
 Template.caltask.events({
-    'click .closeTask': function () {
-        Session.set('editting_calevent', null);
+    'click .closeTask': function (evt, tmpl) {
+        Session.set('editing_calevent', null);
     },
-    'click .deleteCalTask': function () {
-        Session.set('editting_calevent', null);
+    'click .deleteCalTask': function (evt, tmpl) {
+        Meteor.call('removeCalEvent', Session.get('editing_calevent'));
+        Session.set('editing_calevent', null);
     },
-    'click .saveCalTask': function () {
-        Session.set('editting_calevent', null);
+    'click .saveCalTask': function (evt, tmpl) {
+        var type = tmpl.find('.taskTitle').value;
+        if(tmpl.find('.name')){
+            var name = tmpl.find('.name').value;
+            var calevent = {};
+            calevent._id = Session.get('editing_calevent');
+            calevent.type = type;
+            calevent.project = Session.get('active_project');
+            console.log(calevent);
+            Meteor.call('updateCalEvent', calevent);
+        }
+        Session.set('editing_calevent', null);
     }
-
 })
+
+
+

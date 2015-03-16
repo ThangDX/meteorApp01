@@ -17,7 +17,8 @@
 
 <template name="calevent">
     <li class="list-group-item">
-        <a href="#" class="activityEvent">Started</a>
-        <span class="alert alert-success">Title</span>
+        <a href="#" class="activityEvent">{{formatdate start}}</a>
+        <span class="badge">Type</span>
+        <div class="alert alert-success">{{title}}</div>
     </li>
 </template>

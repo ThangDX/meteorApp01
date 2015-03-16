@@ -1,4 +1,7 @@
 <template name="dashboard">
+    {{#if projectToDelete}}
+        {{> delconfirm}}
+    {{/if}}
   <div class="dashboard">
     <ol class="breadcrumb">
         <li><a href="{{pathFor 'home'}}"><i class="fa fa-home"></i>Home</a></li>
@@ -38,7 +41,7 @@
             </div>
             <div class="panel-body">
                 <small>
-                    <span>Due for <a href="/customers/{{custname}}">{{customer}}</a></span>
+                    <span>Due for <a href="/customers/{{customer.name}}"></a></span>
                 </small>
                 <br/>
                 <small>
