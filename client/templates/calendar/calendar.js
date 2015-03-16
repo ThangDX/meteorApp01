@@ -72,6 +72,7 @@ Template.caltask.events({
             var name = tmpl.find('.name').value;
             var calevent = {};
             calevent._id = Session.get('editing_calevent');
+            calevent.title = name;
             calevent.type = type;
             calevent.project = Session.get('active_project');
             console.log(calevent);

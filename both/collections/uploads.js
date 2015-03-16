@@ -2,7 +2,7 @@
  * Created by thangdx on 07/03/2015.
  */
 Uploads = new FS.Collection('uploads',
-    {stores: [new FS.Store.FileSystem('uploads', {path:'/Users/KPMS/LearnMeteor/meteorApp01'})]});
+    {stores: [new FS.Store.FileSystem('uploads', {path:'/home/thangdx/MeteorApp/LearnApp/meteorApp01'})]});
 Uploads.allow({
     insert: function() {
         return true;
